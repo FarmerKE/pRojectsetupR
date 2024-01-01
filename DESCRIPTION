@@ -1,10 +1,8 @@
 Package: pRojectsetupR
-Title: What the Package Does (One Line, Title Case)
+Title: Package creates Shiny App and Plumber API file structure
 Version: 0.0.0.9000
-Authors@R: c(
-    person("Kennedy", "Kioko"),
-    person(, , , "kioko_k@yahoo.com", role = "aut")
-  )
+Authors@R: 
+    person("Kennedy", "Kioko", , "kioko_k@yahoo.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: GPL (>= 3)
 Encoding: UTF-8

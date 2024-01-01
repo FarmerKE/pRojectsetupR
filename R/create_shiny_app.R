@@ -1,4 +1,11 @@
-
+#' A function to create directory in project folder
+#'
+#' @param dir_name Provide a directory name
+#'
+#' @return
+#' @export
+#'
+#' @examples dir_create_function("R")
 dir_create_function <- function(dir_name) {
   if(!dir.exists(dir_name)) {
     dir.create(dir_name)
@@ -8,6 +15,15 @@ dir_create_function <- function(dir_name) {
   }
 }
 
+#' A function to create a file in project folder
+#'
+#' @param file_name Provide a file name
+#' @param dest This is the working directory; default set as getwd()
+#'
+#' @return
+#' @export
+#'
+#' @examples file_create_function("app.R", getwd())
 file_create_function <- function(file_name, dest = getwd()) {
   
   file_dest <- glue::glue("{dest}/{file_name}")
@@ -20,6 +36,14 @@ file_create_function <- function(file_name, dest = getwd()) {
   }
 }
 
+#' Create a global.R file
+#'
+#' @param dest This is the working directory; default set as getwd()
+#'
+#' @return
+#' @export
+#'
+#' @examples create_global_file(getwd())
 create_global_file <- function(dest = getwd()) {
   file_name = "global.R"
   if(!file.exists(file_name)) {
@@ -32,6 +56,15 @@ create_global_file <- function(dest = getwd()) {
   }
 }
 
+#' Create a shiny app default file.
+#'
+#' @param dest This is the working directory; default set as getwd()
+#' @param file_name Provide a file name
+#'
+#' @return
+#' @export
+#'
+#' @examples create_r_module_file(dest = "R/", file_name = "home")
 create_r_module_file <- function(dest = getwd(), file_name) {
   file_name_main <- paste0(glue::glue("{dest}/{file_name}"), '.R')
   if(!file.exists(file_name_main)) {
@@ -69,6 +102,14 @@ create_r_module_file <- function(dest = getwd(), file_name) {
   }
 }
 
+#' Create a dockerfile template.
+#'
+#' @param dest This is the working directory; default set as getwd()
+#'
+#' @return
+#' @export
+#'
+#' @examples create_dockerfile()
 create_dockerfile <- function(dest = getwd()) {
   file_name = "Dockerfile"
   if(!file.exists(file_name)) {
@@ -91,6 +132,15 @@ create_dockerfile <- function(dest = getwd()) {
   }
 }
 
+#' Create shiny app.R file.
+#' Holds the logic for UI and Server files
+#'
+#' @param dest This is the working directory; default set as getwd()
+#'
+#' @return
+#' @export
+#'
+#' @examples create_app_file()
 create_app_file <- function(dest = getwd()) {
   file_name = "app.R"
   if(!file.exists(file_name)) {
@@ -113,6 +163,14 @@ create_app_file <- function(dest = getwd()) {
   }
 }
 
+#' Create a shiny runApp.R file.
+#'
+#' @param dest This is the working directory; default set as getwd()
+#'
+#' @return
+#' @export
+#'
+#' @examples create_run_app_file()
 create_run_app_file <- function(dest = getwd()) {
   file_name = "runApp.R"
   if(!file.exists(file_name)) {
@@ -131,7 +189,13 @@ create_run_app_file <- function(dest = getwd()) {
   }
 }
 
-# Shiny App Directory and File creation
+#' Shiny App Directory and File creation. 
+#' Creates the files in the project directory.
+#'
+#' @return
+#' @export
+#'
+#' @examples create_shiny_app()
 create_shiny_app <- function() {
   dir_create_function("R")
   dir_create_function("js")
