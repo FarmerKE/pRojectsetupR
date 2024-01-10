@@ -49,7 +49,7 @@ create_global_file <- function(dest = getwd()) {
   if(!file.exists(file_name)) {
     file.create(file_name)
     cat("library(config)", file = file_name, append = TRUE)
-    cat("config <- config::get(file = 'config.yml')", file = file_name, append = TRUE)
+    cat("\nconfig <- config::get(file = 'config.yml')", file = file_name, append = TRUE)
     list(message = "Global.R file Successfully Created")
   } else {
     list(error = "File Exists")
