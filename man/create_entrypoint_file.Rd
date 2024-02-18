@@ -7,7 +7,7 @@
 create_entrypoint_file(dest)
 }
 \arguments{
-\item{dest}{}
+\item{dest}{Set as project directory. Default is getwd()}
 }
 \description{
 Create Plumber Entrypoint.R File

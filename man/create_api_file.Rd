@@ -7,9 +7,9 @@
 create_api_file(dest, filename)
 }
 \arguments{
-\item{dest}{}
+\item{dest}{Set as project directory. Default is getwd()}
 
-\item{filename}{}
+\item{filename}{provide a name for the Plumber API file}
 }
 \description{
 Create Plumber API File

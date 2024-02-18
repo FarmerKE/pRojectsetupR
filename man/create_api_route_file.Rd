@@ -7,11 +7,13 @@
 create_api_route_file(dest, app_name)
 }
 \arguments{
-\item{dest}{}
+\item{dest}{Set as project directory. Default is getwd()}
+
+\item{app_name}{Create a name of the new api file.}
 }
 \description{
 Create Plumber API route file
 }
 \examples{
-create_api_route_file(dest = getwd())
+create_api_route_file(dest = getwd(), app_name = "main")
 }

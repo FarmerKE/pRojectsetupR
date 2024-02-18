@@ -6,9 +6,6 @@
 \usage{
 api_dir_function()
 }
-\arguments{
-\item{dest}{}
-}
 \description{
 Create API Folder Directory
 }

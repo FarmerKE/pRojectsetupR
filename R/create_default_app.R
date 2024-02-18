@@ -215,8 +215,6 @@ create_shiny_app <- function() {
 
 #' Create API Folder Directory
 #'
-#' @param dest 
-#'
 #' @return
 #' @export
 #'
@@ -233,12 +231,13 @@ api_dir_function <- function() {
 
 #' Create Plumber API route file
 #'
-#' @param dest 
+#' @param dest  Set as project directory. Default is getwd()
+#' @param app_name Create a name of the new api file.
 #'
 #' @return
 #' @export
 #'
-#' @examples create_api_route_file(dest = getwd())
+#' @examples create_api_route_file(dest = getwd(), app_name = "main")
 create_api_route_file <- function(dest, app_name) {
   file_name = paste0(dest, "api.R")
   if(!file.exists(file_name)) {
@@ -256,7 +255,7 @@ create_api_route_file <- function(dest, app_name) {
 
 #' Create Plumber Entrypoint.R File
 #'
-#' @param dest 
+#' @param dest Set as project directory. Default is getwd()
 #'
 #' @return
 #' @export
@@ -278,8 +277,8 @@ create_entrypoint_file <- function(dest) {
 
 #' Create Plumber API File
 #'
-#' @param dest 
-#' @param filename 
+#' @param dest Set as project directory. Default is getwd()
+#' @param filename provide a name for the Plumber API file
 #'
 #' @return
 #' @export
@@ -303,7 +302,7 @@ create_api_file <- function(dest, filename) {
 
 #' Create Plumber App
 #'
-#' @param route_name 
+#' @param route_name Create a name for the initial API file to be generated.
 #'
 #' @return
 #' @export
